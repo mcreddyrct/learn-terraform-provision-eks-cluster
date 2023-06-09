@@ -1,0 +1,7 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: frontend-env-properties
+  namespace: default
+data:
+  backedn-url: "httpd//backend-lb-svc.business-logic"

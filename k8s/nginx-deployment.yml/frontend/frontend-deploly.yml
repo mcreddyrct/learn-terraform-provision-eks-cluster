@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: test
-  name: nginx-deployment
+  namespace: ui
+  name: frontend-deployment
   labels:
-    app: nginx
+    app: frontend
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: frontend
   template:
     metadata:
       labels:
-        app: nginx
+        app: frontend
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.14.2
+      - name: frontend
+        image: <provide ecr image>
         ports:
         - containerPort: 80
